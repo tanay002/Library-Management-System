@@ -15,6 +15,7 @@ public class IssueBook extends javax.swing.JFrame {
 Connection conn;
 ResultSet rs;
 PreparedStatement pst;
+int bookCount;
     /**
      * Creates new form IssueBook
      */
@@ -71,9 +72,9 @@ PreparedStatement pst;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Issue Book", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(0, 102, 102))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Issue Book", 0, 0, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(0, 102, 102))); // NOI18N
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Student Info", javax.swing.border.TitledBorder.RIGHT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(102, 102, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Student Info", 3, 0, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(102, 102, 0))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Student ID");
@@ -96,6 +97,7 @@ PreparedStatement pst;
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Name");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Search-13.png"))); // NOI18N
         jButton1.setText("Search");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -147,11 +149,11 @@ PreparedStatement pst;
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
+                .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -166,7 +168,7 @@ PreparedStatement pst;
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Book Detail", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(153, 0, 51))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Book Detail", 0, 0, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(153, 0, 51))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Book ID");
@@ -186,6 +188,7 @@ PreparedStatement pst;
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("Pages");
 
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Search-13.png"))); // NOI18N
         jButton4.setText("Search");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +221,7 @@ PreparedStatement pst;
                     .addComponent(jTextField6)
                     .addComponent(jTextField10)
                     .addComponent(jTextField1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(jButton4)
                 .addContainerGap())
         );
@@ -258,7 +261,7 @@ PreparedStatement pst;
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Date Of Issue");
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Home\\Desktop\\Library Managemnet System\\images\\issuedt.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/issuedt.png"))); // NOI18N
         jButton2.setText("Issue");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -267,7 +270,7 @@ PreparedStatement pst;
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Home\\Desktop\\Library Managemnet System\\images\\back-arrow.png")); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back-arrow.png"))); // NOI18N
         jButton3.setText("Back");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -283,28 +286,29 @@ PreparedStatement pst;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addGap(80, 80, 80)
                         .addComponent(jLabel14)
-                        .addGap(26, 26, 26)
+                        .addGap(18, 18, 18)
                         .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
+                        .addGap(127, 127, 127)
                         .addComponent(jButton2)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton3)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                        .addComponent(jButton3))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel14)
@@ -313,7 +317,7 @@ PreparedStatement pst;
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton2))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -333,7 +337,7 @@ PreparedStatement pst;
                 .addContainerGap())
         );
 
-        setSize(new java.awt.Dimension(869, 498));
+        setSize(new java.awt.Dimension(920, 516));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -352,6 +356,9 @@ PreparedStatement pst;
            pst.setString(1, jTextField1.getText());
            rs=pst.executeQuery();
            if(rs.next()){
+               String add6=rs.getString("bookIssuedStatus");
+               if(add6.equals("Available"))
+               {
             String add1=rs.getString("Name");
             jTextField8.setText(add1);
             String add2=rs.getString("Edition");
@@ -365,6 +372,11 @@ PreparedStatement pst;
             rs.close();
             rs.close();
             pst.close();
+               }
+               else
+               {
+               JOptionPane.showMessageDialog(null, "Book is Already Issued");
+               }
            }
            else{
                JOptionPane.showMessageDialog(null, "Book ID Not Found");
@@ -383,12 +395,17 @@ PreparedStatement pst;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        
         String sql="select * from Student where Student_ID=?";
         try{
            pst=conn.prepareStatement(sql);
            pst.setString(1, jTextField4.getText());
            rs=pst.executeQuery();
            if(rs.next()){
+               bookCount=Integer.parseInt(rs.getString("bookIssueCount"));
+               if(bookCount<3)
+               {
+                   bookCount++;
             String add1=rs.getString("Name");
             jTextField2.setText(add1);
             String add2=rs.getString("Father");
@@ -397,13 +414,18 @@ PreparedStatement pst;
             jTextField11.setText(add3);
             String add4=rs.getString("Branch");
             jTextField5.setText(add4);
-            String add5=rs.getString("Year");
+            String add5=""+rs.getInt("Year");
             jTextField12.setText(add5);
-            String add6=rs.getString("Semester");
+            String add6=""+rs.getString("Semester");
             jTextField13.setText(add6);
             rs.close();
             pst.close();
-           }
+               }
+               else
+               {
+               JOptionPane.showMessageDialog(null, "This Student Already Issued Maximum Book");
+               }
+               }
            else{
                JOptionPane.showMessageDialog(null, "Student ID Not Found");
            }
@@ -421,23 +443,50 @@ PreparedStatement pst;
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        String sql="insert into Issue(Book_ID,Name,Edition,Publisher,Price,Pages,Student_ID,SName,FName,Course,Branch,Year,Semester,DateOfIssue) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql2="update student set bookIssueCount=? where Student_ID=?";
+          String sql3="update book set bookIssuedStatus=? where Book_ID=?";
+           
+          try{
+          pst=conn.prepareStatement(sql2);
+          pst.setInt(1, bookCount);
+          pst.setInt(2,Integer.parseInt(jTextField4.getText()));
+          pst.executeUpdate();
+           }
+           catch(Exception e)
+           {
+           e.printStackTrace();
+           }
+           
+            try{
+          pst=conn.prepareStatement(sql3);
+          pst.setString(1,"Issued");
+          pst.setInt(2,Integer.parseInt(jTextField1.getText()));
+          pst.executeUpdate();
+           }
+           catch(Exception e)
+           {
+           e.printStackTrace();
+           }
+            
+        String sql="insert into Issue(Book_ID,Name,Edition,Publisher,Price,Pages,Student_ID,SName,FName,Course,Branch,Year,Semester,status,DateOfIssue) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try{
           pst=conn.prepareStatement(sql);
-          pst.setString(1, jTextField1.getText());
+          pst.setInt(1,Integer.parseInt(jTextField1.getText()));
           pst.setString(2, jTextField8.getText());
-          pst.setString(3, jTextField10.getText());
+          pst.setInt(3,Integer.parseInt(jTextField10.getText()));
           pst.setString(4, jTextField7.getText());
-          pst.setString(5, jTextField9.getText());
-          pst.setString(6, jTextField6.getText());
-          pst.setString(7, jTextField4.getText());
+          pst.setInt(5,Integer.parseInt(jTextField9.getText()));
+          pst.setInt(6,Integer.parseInt(jTextField6.getText()));
+          pst.setInt(7,Integer.parseInt(jTextField4.getText()));
           pst.setString(8, jTextField2.getText());
           pst.setString(9, jTextField3.getText());
           pst.setString(10, jTextField11.getText());
           pst.setString(11, jTextField5.getText());
-          pst.setString(12, jTextField12.getText());
-          pst.setString(13, jTextField13.getText());
-          pst.setString(14, ((JTextField)jDateChooser1.getDateEditor().getUiComponent()).getText());
+          pst.setInt(12,Integer.parseInt(jTextField12.getText()));
+          pst.setInt(13,Integer.parseInt(jTextField13.getText()));
+           pst.setString(14,"BookIssued");
+          pst.setString(15, ((JTextField)jDateChooser1.getDateEditor().getUiComponent()).getText());
+         
           pst.execute();
           JOptionPane.showMessageDialog(null, "Book Issued");
         }catch(Exception e){

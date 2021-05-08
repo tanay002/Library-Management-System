@@ -16,6 +16,7 @@ public class ReturnBook extends javax.swing.JFrame {
 Connection conn;
 ResultSet rs;
 PreparedStatement pst;
+int issueCount;
     /**
      * Creates new form ReturnBook
      */
@@ -79,6 +80,7 @@ PreparedStatement pst;
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setText("Issue Date");
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/issuedt.png"))); // NOI18N
         jButton2.setText("Return");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +88,7 @@ PreparedStatement pst;
             }
         });
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back-arrow.png"))); // NOI18N
         jButton3.setText("Back");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,9 +96,9 @@ PreparedStatement pst;
             }
         });
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Return Book", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(255, 0, 51))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Return Book", 0, 0, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(255, 0, 51))); // NOI18N
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Student Info", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(102, 102, 0))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Student Info", 1, 0, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(102, 102, 0))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel1.setText("Student ID");
@@ -118,6 +121,7 @@ PreparedStatement pst;
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel2.setText("Name");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Search-13.png"))); // NOI18N
         jButton1.setText("Search");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +192,7 @@ PreparedStatement pst;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Book Detail", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(153, 0, 51))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Book Detail", 0, 0, new java.awt.Font("Tahoma", 0, 24), new java.awt.Color(153, 0, 51))); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Book ID");
@@ -232,7 +236,7 @@ PreparedStatement pst;
                     .addComponent(jTextField6)
                     .addComponent(jTextField10)
                     .addComponent(jTextField1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -291,7 +295,7 @@ PreparedStatement pst;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(460, Short.MAX_VALUE)
+                .addContainerGap(519, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -303,8 +307,9 @@ PreparedStatement pst;
                             .addComponent(jTextField14)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton3)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addGap(22, 22, 22)))
                 .addGap(43, 43, 43))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -316,7 +321,7 @@ PreparedStatement pst;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -331,7 +336,7 @@ PreparedStatement pst;
                 .addGap(47, 47, 47))
         );
 
-        setSize(new java.awt.Dimension(746, 575));
+        setSize(new java.awt.Dimension(807, 575));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -342,8 +347,8 @@ PreparedStatement pst;
         ob.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    public void Delete(){
-        String sql="delete from Issue where Student_Id=?";
+    public void updateIssueStatus(){
+        String sql="update issue set status='Returned' where Student_Id=?";
         try{
           pst=conn.prepareStatement(sql);
           pst.setString(1, jTextField4.getText());
@@ -353,25 +358,65 @@ PreparedStatement pst;
         }
     }
     
+    public void changeCountStatus()
+    {
+        String sql="select * from student where Student_Id=?";
+        try{
+        pst=conn.prepareStatement(sql);
+           pst.setInt(1,Integer.parseInt(jTextField4.getText()));
+           rs=pst.executeQuery();
+           if(rs.next())
+           {
+           issueCount=Integer.parseInt(rs.getString("bookIssueCount"));
+            issueCount--;
+           }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+        try{
+              String sql2="update student set bookIssueCount=? where Student_Id=?";
+        pst=conn.prepareStatement(sql2);
+           pst.setInt(1,issueCount);
+           pst.setInt(2,Integer.parseInt(jTextField4.getText()));
+          pst.executeUpdate();
+         
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        
+        try{
+              String sql2="update book set bookIssuedStatus=? where Book_ID=?";
+        pst=conn.prepareStatement(sql2);
+           pst.setString(1,"Available");
+           pst.setInt(2,Integer.parseInt(jTextField1.getText()));
+          pst.executeUpdate();
+         
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
     public void ReturnUpdate(){
-        String sql="insert into Return(Student_ID,Name,FName,Course,Branch,Year,Semester,Book_ID,BName,Edition,Publisher,Price,Page,DOI,DOR) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql="insert into returnbook (Student_ID,Name,FName,Course,Branch,Year,Semester,Book_ID,BName,Edition,Publisher,Price,Page,DOI,DOR,status) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try{
           pst=conn.prepareStatement(sql);
-          pst.setString(1, jTextField4.getText());
+          pst.setInt(1,Integer.parseInt(jTextField4.getText()));
           pst.setString(2, jTextField2.getText());
           pst.setString(3, jTextField3.getText());
           pst.setString(4, jTextField11.getText());
           pst.setString(5, jTextField5.getText());
-          pst.setString(6, jTextField12.getText());
-          pst.setString(7, jTextField13.getText());
-          pst.setString(8, jTextField1.getText());
-          pst.setString(9, jTextField8.getText());
-          pst.setString(10, jTextField10.getText());
-          pst.setString(11, jTextField7.getText());
-          pst.setString(12, jTextField9.getText());
-          pst.setString(13, jTextField6.getText());
+          pst.setInt(6,Integer.parseInt(jTextField12.getText()));
+          pst.setInt(7,Integer.parseInt(jTextField13.getText()));
+          pst.setInt(8,Integer.parseInt(jTextField1.getText()));
+          pst.setString(9,(jTextField8.getText()));
+          pst.setInt(10,Integer.parseInt(jTextField10.getText()));
+          pst.setString(11,jTextField7.getText());
+          pst.setInt(12,Integer.parseInt(jTextField9.getText()));
+          pst.setInt(13,Integer.parseInt(jTextField6.getText()));
           pst.setString(14, jTextField14.getText());
           pst.setString(15, ((JTextField)jDateChooser1.getDateEditor().getUiComponent()).getText());
+          pst.setString(16, "Returned");
           pst.execute();
           JOptionPane.showMessageDialog(null, "Book Returned");
         }catch(Exception e){
@@ -387,6 +432,9 @@ PreparedStatement pst;
            pst.setString(1, jTextField4.getText());
            rs=pst.executeQuery();
            if(rs.next()){
+               String addk=rs.getString("Student_ID");
+               jTextField4.setText(addk);
+               
                String add1=rs.getString("SName");
                jTextField2.setText(add1);
                String add2=rs.getString("FName");
@@ -434,7 +482,9 @@ PreparedStatement pst;
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         ReturnUpdate();
-        Delete();    
+        updateIssueStatus(); 
+        changeCountStatus();
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

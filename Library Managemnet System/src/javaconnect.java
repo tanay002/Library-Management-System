@@ -16,8 +16,8 @@ Connection conn;
 
 public static Connection ConnecrDb() {
     try{
-        Class.forName("org.sqlite.JDBC");
-        Connection conn=DriverManager.getConnection("jdbc:sqlite:C:\\Users\\Home\\Desktop\\Library Managemnet System\\LibraryNew.sqlite");
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/library_management_system","root","root");
                 return conn;
     }catch(Exception e) {
         JOptionPane.showMessageDialog(null, e);
